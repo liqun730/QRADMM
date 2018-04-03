@@ -1,0 +1,17 @@
+Package: QRADMM
+Type: Package
+Title: Quantile Regression with ADMM
+Version: 0.1.0
+Author: Liqun Yu and Nan Lin
+Maintainer: Liqun Yu <yuliqun88@gmail.com>
+Description: Fit the penalized quantile regression with the alternating direction method of multipliers.
+    The package currently supports the Lasso, elastic net, MCP, and SCAD penalties. The current implementation 
+    is only pseudo-parallel.
+License: GPL-2
+Encoding: UTF-8
+LazyData: true
+LinkingTo: Rcpp,RcppArmadillo
+Imports: Rcpp,RcppArmadillo
+RoxygenNote: 6.0.1
+NeedsCompilation: yes
+Packaged: 2018-04-03 21:01:02 UTC; Liqun
