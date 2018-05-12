@@ -7,7 +7,7 @@
 using namespace Rcpp;
 
 // QRADM
-arma::vec QRADM(arma::mat xr, arma::vec yr, double ta, double rhor, double lambdar, int iter, bool intercept, int M, std::string penalty, double a);
+arma::vec QRADM(arma::mat xr, arma::vec yr, double ta, double rhor, double lambdar, int iter, bool intercept, int M, String penalty, double a);
 RcppExport SEXP _QRADMM_QRADM(SEXP xrSEXP, SEXP yrSEXP, SEXP taSEXP, SEXP rhorSEXP, SEXP lambdarSEXP, SEXP iterSEXP, SEXP interceptSEXP, SEXP MSEXP, SEXP penaltySEXP, SEXP aSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
@@ -20,14 +20,14 @@ BEGIN_RCPP
     Rcpp::traits::input_parameter< int >::type iter(iterSEXP);
     Rcpp::traits::input_parameter< bool >::type intercept(interceptSEXP);
     Rcpp::traits::input_parameter< int >::type M(MSEXP);
-    Rcpp::traits::input_parameter< std::string >::type penalty(penaltySEXP);
+    Rcpp::traits::input_parameter< String >::type penalty(penaltySEXP);
     Rcpp::traits::input_parameter< double >::type a(aSEXP);
     rcpp_result_gen = Rcpp::wrap(QRADM(xr, yr, ta, rhor, lambdar, iter, intercept, M, penalty, a));
     return rcpp_result_gen;
 END_RCPP
 }
 // QRADMMCPP
-arma::vec QRADMMCPP(arma::mat x, arma::vec y, double tau, double rho, double lambda, int iter, bool intercept, std::string penalty, double a, double lambda1, double lambda2);
+arma::vec QRADMMCPP(arma::mat x, arma::vec y, double tau, double rho, double lambda, int iter, bool intercept, String penalty, double a, double lambda1, double lambda2);
 RcppExport SEXP _QRADMM_QRADMMCPP(SEXP xSEXP, SEXP ySEXP, SEXP tauSEXP, SEXP rhoSEXP, SEXP lambdaSEXP, SEXP iterSEXP, SEXP interceptSEXP, SEXP penaltySEXP, SEXP aSEXP, SEXP lambda1SEXP, SEXP lambda2SEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
@@ -39,7 +39,7 @@ BEGIN_RCPP
     Rcpp::traits::input_parameter< double >::type lambda(lambdaSEXP);
     Rcpp::traits::input_parameter< int >::type iter(iterSEXP);
     Rcpp::traits::input_parameter< bool >::type intercept(interceptSEXP);
-    Rcpp::traits::input_parameter< std::string >::type penalty(penaltySEXP);
+    Rcpp::traits::input_parameter< String >::type penalty(penaltySEXP);
     Rcpp::traits::input_parameter< double >::type a(aSEXP);
     Rcpp::traits::input_parameter< double >::type lambda1(lambda1SEXP);
     Rcpp::traits::input_parameter< double >::type lambda2(lambda2SEXP);

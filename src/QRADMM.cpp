@@ -349,7 +349,7 @@ arma::vec lsescad(arma::mat x,arma::vec y, arma::vec beta, int m,bool intercept,
 
 
 //The beta update function for QRADMM with different penalties
-arma::vec betaupdate(arma::mat ima,arma::mat x,arma::vec y, arma::vec beta,int m,bool intercept,double rho,double lambda, double a, double lambda1, double lambda2, std::string penalty){
+arma::vec betaupdate(arma::mat ima,arma::mat x,arma::vec y, arma::vec beta,int m,bool intercept,double rho,double lambda, double a, double lambda1, double lambda2, String penalty){
 
     if(penalty=="none")
         beta = ima*y;
@@ -367,7 +367,7 @@ arma::vec betaupdate(arma::mat ima,arma::mat x,arma::vec y, arma::vec beta,int m
 }
 
 //[[Rcpp::export]]
-arma::vec QRADMMCPP(arma::mat x,arma::vec y,double tau,double rho,double lambda,int iter, bool intercept,std::string penalty, double a,double lambda1,double lambda2){
+arma::vec QRADMMCPP(arma::mat x,arma::vec y,double tau,double rho,double lambda,int iter, bool intercept,String penalty, double a,double lambda1,double lambda2){
 
     int maxit=(iter);
     int n=x.n_rows, p=x.n_cols;

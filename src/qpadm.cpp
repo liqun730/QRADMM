@@ -9,7 +9,7 @@ arma::vec shrinkcpp1(arma::vec u, arma::vec v){
     return w;
 }
 
-arma::vec deriv(arma::vec beta, double a, double lambda, std::string penalty){
+arma::vec deriv(arma::vec beta, double a, double lambda, String penalty){
     int p = beta.n_elem;
     arma::vec df = arma::zeros(p);
     if(penalty=="scad"){
@@ -30,7 +30,7 @@ arma::vec deriv(arma::vec beta, double a, double lambda, std::string penalty){
 }
 
 //[[Rcpp::export]]
-arma::vec QRADM(arma::mat xr,arma::vec yr,double ta,double rhor,double lambdar,int iter,bool intercept,int M,std::string penalty,double a){
+arma::vec QRADM(arma::mat xr,arma::vec yr,double ta,double rhor,double lambdar,int iter,bool intercept,int M,String penalty,double a){
 
     int maxit=(iter);
     double tau=(ta),rho=(rhor),lambda=(lambdar),alpha=1.7;
