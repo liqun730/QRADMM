@@ -14,4 +14,4 @@ LinkingTo: Rcpp,RcppArmadillo
 Imports: Rcpp,RcppArmadillo
 RoxygenNote: 6.0.1
 NeedsCompilation: yes
-Packaged: 2018-05-12 16:09:45 UTC; Liqun
+Packaged: 2018-05-12 16:19:58 UTC; Liqun

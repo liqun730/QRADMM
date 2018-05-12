@@ -1,6 +1,5 @@
 #include <RcppArmadillo.h>
 // [[Rcpp::depends(RcppArmadillo)]]
-#include <chrono>
 using namespace Rcpp;
 using namespace arma;
 
