@@ -3,3 +3,6 @@ R package for ADMM for penalized quantile regression. It wraps up both QRADM and
 
 * __Yu, L.__ and Lin, N. (2017). ADMM for quantile regression in big data, _International Statistical Review_, 85(3):494-518.
 * **Yu, L.**, Lin, N. and Wang, L. (2017). A parallel algorithm for large-scale nonconvex penalized quantile regression. _Journal of Computational and Graphical Statistics_, 26(4), 935-939.
+
+# Caution:
+The current version can only be installed on MAC OS. 
